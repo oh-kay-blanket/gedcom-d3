@@ -422,35 +422,35 @@ const getFamilies = (p) => {
 // Get color
 const getColor = (p, surnameList) => {
 	const colorList = [
-		'#ff7f50', // coral
+		'#ef8a65', // coral
 		'#00b4ff', // sky blue
 		'#fac641', // mexican egg yolk
-		'#8a9b0f', // olive
-		'#70ccc7', // sea foam
-		'#a37e58', // light brown
-		'#ec4913', // burnt orange
-		'#a27dbd', // soft royal purple
-		'#11644d', // forest
-		'#b3347c', // magenta
-		'#359668', // grass & sage
-		'#e87c76', // soft pink
-		'#80d152', // neon green
-		'#ecd078', // tangerine
-		'#6e90e6', // ligt purple blue
-		'#e08e79', // blush
-		'#c44d58', // rouge
-		'#7ff0ca', // light sea foam
-		'#a6b890', // olive sage
+		'#c8d84c', // olive
+		'#e1b386', // light brown
 		'#a5c2cc', // light blue grey
+		'#e87c76', // soft pink
+		'#d0a8ec', // soft royal purple
+		'#8ad5b2', // grass & sage
+		'#f8a7d0', // dry wine
+		'#6e90e6', // ligt purple blue
+		'#a6e9e6', // sea foam
+		'#df9ac1', // magenta
+		'#4ae9bc', // forest
+		'#e08e79', // blush
+		'#80d152', // neon green
+		'#e7c34e', // tangerine
+		'#7ff0ca', // light sea foam
+		'#ff835a', // burnt orange
+		'#eebd6e', // chocolate
+		'#a6b890', // olive sage
+		'#c44d58', // rouge
 		'#e8b28e', // peach
-		'#826942', // chocolate
 		'#d4ee5e', // lime
-		'#cad96a', // light yellow
+		'#f3f621', // light yellow
 		'#e887aa', // newborn pink
-		'#6541a3', // royal purple
-		'#75616b', // dry wine
+		'#c4a8f6', // royal purple
 		'#71cfde', // baby foam
-		'#7a7a7a', // light grey
+		'#ccc', // light grey
 	]
 
 	// If color description listed in GEDCOM
