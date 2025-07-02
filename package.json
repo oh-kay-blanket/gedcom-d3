@@ -1,6 +1,6 @@
 {
 	"name": "gedcom-d3",
-	"version": "2.0.7",
+	"version": "2.0.8",
 	"description": "A GEDCOM parser, which translates GEDCOM (.ged) files into D3 capable JSON. This package is specifically designed to prepare data for use in https://github.com/oh-kay-blanket/blood-lines",
 	"main": "index.js",
 	"scripts": {
