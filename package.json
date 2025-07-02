@@ -1,37 +1,37 @@
 {
-  "name": "gedcom-d3",
-  "version": "2.0.7",
-  "description": "A GEDCOM parser, which translates GEDCOM (.ged) files into D3 capable JSON. This package is specifically designed to prepare data for use in https://github.com/mister-blanket/kin-cloud",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "gedcom",
-    "json",
-    "geneaology",
-    "d3",
-    "dag",
-    "directed acyclic graph",
-    "force graph",
-    "three js",
-    "family tree",
-    "3d"
-  ],
-  "author": "Michael Plunkett (https://github.com/mister-blanket)",
-  "license": "ISC",
-  "dependencies": {
-    "concat-stream": "^2.0.0",
-    "tree-crawl": "^1.0.5"
-  },
-  "devDependencies": {
-    "browserify": "^16.2.1",
-    "d3": "^5.0.0",
-    "tape": "^4.6.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:mister.blanket/gedcom-d3.git"
-  },
-  "homepage": "https://github.com/mister-blanket/gedcom-d3"
+	"name": "gedcom-d3",
+	"version": "2.0.7",
+	"description": "A GEDCOM parser, which translates GEDCOM (.ged) files into D3 capable JSON. This package is specifically designed to prepare data for use in https://github.com/oh-kay-blanket/blood-lines",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"gedcom",
+		"json",
+		"geneaology",
+		"d3",
+		"dag",
+		"directed acyclic graph",
+		"force graph",
+		"three js",
+		"family tree",
+		"3d"
+	],
+	"author": "Kayla Plunkett (https://github.com/oh-kay-blanket)",
+	"license": "ISC",
+	"dependencies": {
+		"concat-stream": "^2.0.0",
+		"tree-crawl": "^1.0.5"
+	},
+	"devDependencies": {
+		"browserify": "^16.2.1",
+		"d3": "^5.0.0",
+		"tape": "^4.6.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:oh-kay-blanket/gedcom-d3.git"
+	},
+	"homepage": "https://github.com/oh-kay-blanket/gedcom-d3"
 }
