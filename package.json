@@ -4,7 +4,8 @@
 	"description": "A GEDCOM parser, which translates GEDCOM (.ged) files into D3 capable JSON. This package is specifically designed to prepare data for use in https://github.com/oh-kay-blanket/blood-lines",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"publish": "./publish.sh minor"
 	},
 	"keywords": [
 		"gedcom",
