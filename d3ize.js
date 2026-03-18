@@ -423,35 +423,31 @@ const getFamilies = (p) => {
 const getColor = (p, surnameList) => {
   const colorList = [
     "#f6edd0", // cream
-    "#ef8a65", // coral
-    "#00b4ff", // sky blue
-    "#fac641", // mexican egg yolk
-    "#c8d84c", // olive
-    "#e1b386", // light brown
-    "#a5c2cc", // light blue grey
-    "#e87c76", // soft pink
+    "#f8a39e", // soft pink
+    "#5bceff", // sky blue
+    "#ffc32a", // mexican egg yolk
+    "#8df0c2", // grass & sage
     "#d0a8ec", // soft royal purple
-    "#8ad5b2", // grass & sage
-    "#f8a7d0", // dry wine
+    "#ffa686", // coral
+    "#adcdd8", // light blue grey
+    "#a6b890", // olive sage
+    "#e6f387", // olive
+    "#eebf90", // light brown
     "#6e90e6", // ligt purple blue
-    "#a6e9e6", // sea foam
-    "#df9ac1", // magenta
-    "#4ae9bc", // forest
+    "#f8a7d0", // dry wine
+    "#30f6d5", // sea foam
+    "#be719d", // magenta
     "#e08e79", // blush
     "#80d152", // neon green
-    "#e7c34e", // tangerine
-    "#7ff0ca", // light sea foam
+    "#9efde5", // light sea foam
     "#ff835a", // burnt orange
     "#eebd6e", // chocolate
-    "#a6b890", // olive sage
-    "#c44d58", // rouge
-    "#e8b28e", // peach
+    "#35f8a0", // forest
+    "#f95162", // rouge
     "#d4ee5e", // lime
-    "#f3f621", // light yellow
     "#e887aa", // newborn pink
-    "#c4a8f6", // royal purple
-    "#71cfde", // baby foam
-    "#ccc", // light grey
+    "#a178ea", // royal purple
+    "#00c0de", // baby foam
   ];
 
   // If color description listed in GEDCOM
