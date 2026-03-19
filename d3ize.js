@@ -191,6 +191,14 @@ const getFirstName = (p) => {
         return firstNameNode.data;
       }
     } else {
+      // Fallback: extract given name from NAME value (e.g. "Harry /Potter/")
+      const nameData = nameNode.data || "";
+      const slashIndex = nameData.indexOf("/");
+      const givenPart = (slashIndex !== -1 ? nameData.slice(0, slashIndex) : nameData).trim();
+      if (givenPart) {
+        const spaceIndex = givenPart.indexOf(" ");
+        return spaceIndex !== -1 ? givenPart.slice(0, spaceIndex) : givenPart;
+      }
       return "?";
     }
   } else {
@@ -245,7 +253,7 @@ const getGender = (p) => {
   if (genderNode) {
     return genderNode.data;
   } else {
-    return "Unknown";
+    return "U";
   }
 };
 
@@ -266,6 +274,12 @@ const getDOB = (p) => {
   }
 };
 
+// Extract a 4-digit year from a date string
+const extractYear = (dateStr) => {
+  const match = dateStr.match(/\b(\d{4})\b/);
+  return match ? match[1] : "?";
+};
+
 // Get year of birth
 const getYOB = (p) => {
   // Find 'BIRT' tag
@@ -274,7 +288,7 @@ const getYOB = (p) => {
     // Find 'DATE' tag
     let dateNode = (dobNode.tree.filter(hasTag("DATE")) || [])[0];
     if (dateNode) {
-      return dateNode.data.slice(-4);
+      return extractYear(dateNode.data);
     } else {
       return "?";
     }
@@ -303,7 +317,6 @@ const getPOB = (p) => {
 // Get date of death
 const getDOD = (p) => {
   // Find 'DEAT' tag
-  let dobNode = (p.tree.filter(hasTag("BIRT")) || [])[0];
   let dodNode = (p.tree.filter(hasTag("DEAT")) || [])[0];
   if (dodNode) {
     // Find 'DATE' tag
@@ -313,15 +326,8 @@ const getDOD = (p) => {
     } else {
       return "?";
     }
-  } else if (dobNode) {
-    let dateNode = (dobNode.tree.filter(hasTag("DATE")) || [])[0];
-    if (dateNode) {
-      return dateNode.data.slice(-4) + 100;
-    } else {
-      return "?";
-    }
   } else {
-    return "Present";
+    return "?";
   }
 };
 
@@ -340,7 +346,7 @@ const getYOD = (p) => {
 
     // If death date listed
     if (dateNode) {
-      return dateNode.data.slice(-4);
+      return extractYear(dateNode.data);
     } else {
       return "?";
     }
@@ -352,7 +358,8 @@ const getYOD = (p) => {
     // If DOB listed
     if (dateNode) {
       // If born > 100 yrs ago, call dead
-      if (dateNode.data.slice(-4) < thisYear - 100) {
+      let birthYear = extractYear(dateNode.data);
+      if (birthYear !== "?" && Number(birthYear) < thisYear - 100) {
         return "?";
       } else {
         return "Present";
